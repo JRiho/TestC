@@ -87,10 +87,19 @@
 //	return 0;
 //}
 
-
+// 원의 넓이는 r^2파이
+// 원의 둘레는 2파이r
 int main()
 {
-	double pi = 3.14;
-	int r = 5;
+	double pi = 3.14159;
+	double r = 5.0;
 
+	double area = r * r * pi;
+	double circumference = 2 * pi * r;
+
+	printf("원의 넓이: %.f\n", area);
+	printf("원의 둘레: %.f\n", circumference);
 }
+
+
+// 사다리꼴 넓이 ((윗변 + 아랫변 ) * 높이 ) /2
