@@ -1315,25 +1315,24 @@
 //	return 0;
 //}
 
-#include <stdio.h>
-
-int main()
-{
-	int number = 1;
-	while (1)
-	{
-		int multi = number;
-		multi *= multi;
-
-		if (multi >= 50000)
-		{
-			printf("곱셈 결과는 %d", multi);
-			printf("숫자는 %d", number);
-			break;
-		}
-		number++;
-	}
-}
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int num = 1;
+//	int multi = 1;
+//
+//	while (1)
+//	{
+//		multi = multi * num;
+//		if (multi >= 50000) {
+//			break;
+//		}
+//		num++;
+//	}
+//	printf("%d", num);
+//	return 0;
+//}
 
 //#include <stdio.h>
 //
@@ -1347,8 +1346,199 @@ int main()
 //	char alphabet ='A';
 //	while (alphabet <= 'Z')
 //	{
-//		printf("%c", alphabet);
-//		if (alphabet == 'F') { continue; }
+//		if (alphabet != 'F') { printf("%c", alphabet); }
 //		alphabet++;
 //	}
 //}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int turn = 0;
+//	int count = 0;
+//	int num;
+//
+//	while (count < 31)
+//	{
+//		printf("%c : ", 'A' + turn);
+//		scanf("%d",&num);
+//
+//		if (num < 1 || num > 3) 
+//		{
+//			printf("잘못 입력하셨습니다.");
+//			continue;
+//		}
+//
+//		/*int i = 0;
+//		while (i<num)
+//		{
+//			count++;
+//			i++;
+//		}*/
+//		count += num;
+//		
+//		printf("=> %d", count);
+//		printf("\n");
+//
+//		turn = !turn;
+//		//turn = ++turn % 2;
+//	}
+//	printf("%c가 이겼습니다.", 'A' + turn);
+//
+//	return 0;
+//}
+
+
+//#include <stdio.h>
+//
+//int main() 
+//{
+//    int num;
+//
+//    printf("숫자: ");
+//    scanf("%d", &num);
+//    
+//    
+//        while (num > 0) 
+//        {
+//            int heart = num % 10;
+//            num /= 10;
+//
+//            int count = 0;
+//            while (count < heart * 2) 
+//            {
+//                printf("\u2665");
+//                count++;
+//            }
+//            printf("\n");
+//        }
+//    
+//    return 0;
+//}
+
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//    int num;
+//
+//    printf("숫자: ");
+//    scanf("%d", &num);
+//
+//    int temp = num;
+//    int digits = 1;
+//
+//    while (temp >= 10) 
+//    {
+//        temp /= 10;
+//        digits *= 10;
+//    }
+//
+//    while (digits > 0)
+//    {
+//        int heart = num / digits;
+//        num %= digits;
+//        digits /= 10;
+//
+//        int count = 0;
+//        while (count < heart)
+//        {
+//            printf("\u2665\u2665");
+//            count++;
+//        }
+//        printf("\n");
+//
+//    }
+//
+//    return 0;
+//    printf("자릿수 : %d", digits);
+//}
+
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int temperature = 40;
+//	do
+//	{
+//		printf("현재 온도 : %d도\n", temperature);
+//		temperature--;
+//	} while (temperature > 28);
+//
+//	return 0;
+//
+// }
+
+//#include <stdio.h>
+//int main()
+//{
+//	int input;
+//	enum {GAMEOVER, NEWGAME, LOADGAME, OPTION};
+//	do {
+//		printf("\n메뉴를 선택하세요.\n");
+//		printf("1.새 게임 2.이어하기 3.옵션 (0:게임종료)\n");
+//		scanf("%d", &input);
+//
+//		switch (input)
+//		{
+//		case NEWGAME:
+//			printf("새 게임 시작\n");
+//			break;
+//		case LOADGAME:
+//			printf("세이브 데이터 로드\n");
+//			break;
+//		case OPTION:
+//			printf("옵션 세팅\n");
+//			break;
+//		}
+//	} while (input != GAMEOVER);
+//
+//	printf("게임을 종료합니다.\n");
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int input;
+//	do {
+//		printf("\n메뉴를 선택하세요.\n");
+//		printf("1.로그인\n2.회원가입\n3.옵션\n4.만든사람\n");
+//		scanf("%d", &input);
+//
+//		switch (input)
+//		{
+//		case 1:
+//			printf("로그인\n");
+//			break;
+//		case 2:
+//			printf("회원가입\n");
+//			break;
+//		case 3:
+//			printf("옵션\n");
+//			break;
+//		case 4:
+//			printf("만든사람\n");
+//			break;
+//		default:
+//			input = 0;
+//			break;
+//		}
+//	} while (input>=1 && input <=4);
+//
+//	printf("종료합니다.");
+//	return 0;
+//}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+	srand(unsigned int) (time(NULL));
+}
