@@ -1534,11 +1534,353 @@
 //	return 0;
 //}
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <time.h>
+//
+//int main()
+//{
+//	srand((unsigned int)time(NULL));
+//	int command;
+//	int day = 0;
+//	int study = 0;
+//	int exercise = 0;
+//	int rest = 0;
+//	int play = 0;
+//	do 
+//	{
+//		printf("\n%d번째 날! \n", ++day);
+//		printf("오늘은 무엇을 할까요?\n");
+//		printf("1. 공부한다.\n");
+//		printf("2. 운동한다.\n");
+//		printf("3. 휴식한다.\n");
+//		printf("4. 놀러간다.\n");
+//		printf("그외. 끝낸다.\n >>");
+//		scanf("%d", &command);
+//		if (command == 1)
+//		{
+//			int randInt = rand() % 5 + 1;
+//
+//			switch (randInt)
+//			{
+//			case 1: printf("기분이 좋네요.\n");
+//			case 2: printf("도서관에서\n");
+//			case 3: printf("기분이 나빠요.\n");
+//			case 4: printf("카페에서\n");
+//			case 5: printf("학원에서\n");
+//			}
+//			printf("코딩 공부합니다.");
+//			study++;
+//		}
+//		else if (command == 2)
+//		{
+//			int randInt = rand() % 5 + 1;
+//
+//			switch (randInt)
+//			{
+//			case 1: printf("기분이 좋네요.\n");
+//			case 2: printf("헬스장에서\n");
+//			case 3: printf("기분이 나빠요.\n");
+//			case 4: printf("한강에서\n");
+//			case 5: printf("체육관에서\n");
+//			}
+//			printf("운동합니다.");
+//			exercise++;
+//		}
+//		else if (command == 3)
+//		{
+//			int randInt = rand() % 5 + 1;
+//
+//			switch (randInt)
+//			{
+//			case 1: printf("기분이 좋네요.\n");
+//			case 2: printf("집에서\n");
+//			case 3: printf("누워서\n");
+//			case 4: printf("호텔에서\n");
+//			case 5: printf("공원에서\n");
+//			}
+//			printf("휴식합니다.");
+//			rest++;
+//		}
+//		else if (command == 4)
+//		{
+//			int randInt = rand() % 5 + 1;
+//
+//			switch (randInt)
+//			{
+//			case 1: printf("오버워치\n");
+//			case 2: printf("리그오브레전드\n");
+//			case 3: printf("스타크래프트\n");
+//			case 4: printf("메이플스토리\n");
+//			case 5: printf("배틀그라운드\n");
+//			}
+//			printf("를 합니다.");
+//			play++;
+//		}
+//		else { break; }
+//	} while (1);
+//
+//	if (day <= 3) 
+//	{
+//		printf("그대로입니다....\n");
+//	}
+//	else
+//	{
+//		int max,level;
+//		/*study = 0;
+//		exercise = 0;
+//		rest = 0;
+//		play = 0;*/
+//
+//		max = (study > exercise) ? study : exercise;
+//		max = (max > rest) ? max : rest;
+//		max = (max > play) ? max : play;
+//
+//		if (max == study)
+//		{
+//			level = study / 8;
+//			switch (level)
+//			{
+//			case 0:
+//				printf("코딩새싹이 되었습니다.!\n");
+//				break;
+//			case 1:
+//				printf("프로그래머가 되었습니다.!\n");
+//				break;
+//			case 2:
+//				printf("FrontEnd 개발자가 되었습니다.!\n");
+//				break;
+//			case 3:
+//				printf("BackEnd 개발자가 되었습니다.!\n");
+//				break;
+//			default:
+//				printf("풀스택 개발자가 되었습니다.!\n");
+//				break;
+//			}
+//		}
+//		else if (max == exercise)
+//		{
+//			level = study / 8;
+//			switch (level)
+//			{
+//			case 0:
+//				printf("운동새싹이 되었습니다.!\n");
+//				break;
+//			case 1:
+//				printf("몸짱이 되었습니다.!\n");
+//				break;
+//			case 2:
+//				printf("헬창이 되었습니다.!\n");
+//				break;
+//			case 3:
+//				printf("트레이너가 되었습니다.!\n");
+//				break;
+//			default:
+//				printf("운동선수가 되었습니다.!\n");
+//				break;
+//			}
+//		}
+//		else if (max == rest)
+//		{
+//			level = rest / 8;
+//			switch (level)
+//			{
+//			case 0:
+//				printf("푹쉬어서 건강해졌습니다.!\n");
+//				break;
+//			case 1:
+//				printf("놀고 먹고 자고 편안한 인생입니다.!\n");
+//				break;
+//			case 2:
+//				printf("백수가 되기 직전입니다.!\n");
+//				break;
+//			default:
+//				printf("백수가 되었습니다.!\n");
+//				break;
+//			}
+//		}
+//		else if (max == play)
+//		{
+//			level = play / 8;
+//			switch (level)
+//			{
+//			case 0:
+//				printf("게임에 재능이 있나요?\n");
+//				break;
+//			case 1:
+//				printf("게임 유튜버가 되었습니다.!\n");
+//				break;
+//			case 2:
+//				printf("프로게이머가 되었습니다.!\n");
+//				break;
+//			default:
+//				printf("게임 중독입니다.!\n");
+//				break;
+//			}
+//		}
+//		return 0;
+//		
+//	}
+//}
 
-int main()
-{
-	srand(unsigned int) (time(NULL));
-}
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int sheep;
+//	for (sheep = 1; sheep <= 5; sheep++)
+//	{
+//		printf("양 %d마리\n", sheep);
+//	}
+//	printf("잠들었다!\n");
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int sheep;
+//	for (sheep = 1; sheep <= 5; sheep++)
+//	{
+//		printf("양 %d마리\n", sheep);
+//		if (sheep == 3)
+//		{
+//			printf("도중에 잠들었다!\n");
+//			break;
+//		}
+//	}
+//	return 0;
+//}
+
+
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int sheep;
+//	for (sheep = 1; sheep <= 5; sheep++)
+//	{
+//		if (sheep == 3)
+//		{
+//			printf("졸아서 양을 세지 못했다!\n");
+//			continue;
+//		}
+//		printf("양 %d마리\n", sheep);
+//	}
+//	return 0;
+//}
+
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int sheep;
+//	for (sheep = 1; sheep <= 20; sheep++)
+//	{
+//		printf("양 %d마리\n", sheep);
+//	}
+//	printf("잠들었다!\n");
+//	return 0;
+//}
+
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int sheep;
+//	for (sheep = 1; sheep <= 50; sheep++)
+//	{
+//		if (sheep % 10 == 0)
+//		{
+//			printf("졸아서 양을 세지 못했다!\n");
+//			continue;
+//		}
+//		if (sheep == 45)
+//		{
+//			printf("잠에서 깼다!");
+//			break;
+//		}
+//		printf("양 %d마리\n", sheep);
+//	}
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int round;
+//	for (round = 0; round < 10; round++)
+//	{
+//		printf("라운드 %d\n", round);
+//	}
+//	return 0;
+//}
+
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int round;
+//	for (round = 0; round <= 10; round++)
+//	{
+//		printf("라운드 %d\n", round);
+//	}
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int count;
+//	for (count = 101; count < 111; count++)
+//	{
+//		printf("아파트 %d동\n", count);
+//	}
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int number;
+//	int sum_number = 0;
+//	for (number = 1; number <= 20; number++)
+//	{
+//		sum_number = sum_number + number;
+//	}
+//	printf("도합 %d\n", sum_number);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int count;
+//	int number;
+//	printf("반복할 횟수를 입력하세요 : ");
+//	scanf("%d", &count);
+//	for (number = 0; number < count; number++)
+//	{
+//		printf("삐약");
+//	}
+//	printf("\n");
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int count;
+//	for (count = 10; count < 100; count++)
+//	{
+//		printf("%d ", count);
+//	}
+//	return 0;
+//}
+
+#include <stdio.h>
