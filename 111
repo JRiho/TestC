@@ -2,17 +2,22 @@
 
 int main()
 {
-	for (int j = 3; j >= 0; j--)
+	int LINE = 3;
+	scanf("%d", &LINE);
+	int k = 1;
+	for (int j = LINE-1; j >= 0; j--)
 	{
 		for (int i = 1; i <= j; i++)
 		{
 			printf(" ");
 		}
-		for (int k = 1; k < (); k+=2)
+		for (int i = 1; i <= k; i++)
 		{
 			printf("*");
 		}
 		printf("\n");
+		k += 2;
 	}
+
 	return 0;
 }
